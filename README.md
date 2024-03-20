@@ -11,7 +11,7 @@ Piattaforma già predisposta per questa analisi, integra diverse tecnologie, ott
 # Spacy https://spacy.io/
 Libreria per l'analisi del testo completa anche con modelli NLP
 
-# Hugging Face
+# Hugging Face https://huggingface.co/
 Modelli NER di pubblico dominio per l'analisi del testo
 
 #
