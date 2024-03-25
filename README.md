@@ -8,6 +8,8 @@ GDPR versus LLM prima di usare un LLM controlliamo i dati che inviamo!
 # Garante Privacy
 https://www.garanteprivacy.it/home/diritti/cosa-intendiamo-per-dati-personali
 
+# GDPR definizione dati personali - Commissione Europeaa
+https://commission.europa.eu/law/law-topic/data-protection/reform/what-personal-data_it
 
 # Microsoft Presidio https://microsoft.github.io/presidio/
 Piattaforma già predisposta per questa analisi, integra diverse tecnologie, ottimo candidato, già completo analizza immagini ed altro
