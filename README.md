@@ -7,6 +7,8 @@ GDPR versus LLM prima di usare un LLM controlliamo i dati che inviamo!
 
 # Garante Privacy
 https://www.garanteprivacy.it/home/diritti/cosa-intendiamo-per-dati-personali
+https://gdprlab.it/dati-sensibili-e-gdpr-quali-sono-e-come-trattarli-a-norma-di-legge/
+
 
 # GDPR definizione dati personali - Commissione Europeaa
 https://commission.europa.eu/law/law-topic/data-protection/reform/what-personal-data_it
