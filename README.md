@@ -25,3 +25,15 @@ Modelli NER di pubblico dominio per l'analisi del testo
 ## Idea generale
 Prima bozza una software con UI [StreamLite](https://streamlit.io/) per l'analisi di un testo da copia incolla che come output segnala gli eventuali dati personali 
 Avere molteplici analisi con modelli diversi con pesi diversi per un
+
+### Spacy
+
+- usato per gestire le liste (con punteggio)
+- espressioni regolari (con punteggio)
+
+### Spacy NER
+
+### Huggingface NER
+
+
+Finale
