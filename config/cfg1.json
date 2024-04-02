@@ -1,0 +1,39 @@
+{
+    "engine" : "spacy",
+    "description" : "Spacy_List",
+    "version" : "1.1",
+    "type" : "LIST",
+    "requirements" : [
+        "spacy",
+        "others"
+    ],
+
+    "lists" : [
+        {
+            "name" : "nomi",
+            "data" : [ "Mario", "Luca", "Luigi"],
+            "label" : "NOMI",
+            "weight" : 1
+        },
+        {
+            "name" : "cognomi",
+            "data" : ["Rossi", "Bianchi", "Verdi"],
+            "label" : "COGNOMI",
+            "weight" : 1
+        },
+        {
+            "name" : "localita",
+            "data" : ["Milano", "Roma", "Salsomaggiore"],
+            "label" : "LOCALITA",
+            "weight" : 1
+        },
+        {
+            "name" : "malattie",
+            "data" : ["raffreddore", "influenza", "otite"],
+            "label" : "MALATTIE",
+            "weight" : 1
+        }
+    ]
+
+
+}

@@ -1,0 +1,13 @@
+{
+    "engine" : "spacy",
+    "description" : "Spacy_NER",
+    "version" : "1.1",
+    "type" : "NER",
+    "ner_model" : "it_core_news_lg",
+    "requirements" : [
+        "spacy",
+        "others"
+    ]  
+
+
+}
