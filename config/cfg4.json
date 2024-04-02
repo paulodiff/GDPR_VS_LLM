@@ -1,0 +1,19 @@
+{
+    "engine" : "spacy",
+    "description" : "Spacy_it_nerIta_trf",
+    "version" : "1.1",
+    "type" : "CUSTOM",
+    "ref" : "https://huggingface.co/bullmount/it_nerIta_trf",
+    "install_module" : [
+        "pip install https://huggingface.co/bullmount/it_nerIta_trf/resolve/main/it_nerIta_trf-any-py3-none-any.whl"
+    ],
+    "using_module" : [
+        "nlp = spacy.load(\"it_nerIta_trf\")"
+    ],
+    "requirements" : [
+        "spacy",
+        "others"
+    ],
+    "lists" : []
+
+}

@@ -28,12 +28,13 @@ def TextAnalyzer(text, config, options):
                 "data" : data
             })
             
-        elif engine == 'Transformer':
-
+        elif engine == 'huggingface':
+            eng = TE.TransformerEngine(json_config, text)     
+            data =  eng.run()
             result.append({
                 "engine" : engine,
                 "description" : item,
-                "data" : []
+                "data" : data
             })
 
         else: 

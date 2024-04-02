@@ -31,6 +31,7 @@ if st.button('Analizza'):
     # r_response = te.RerankResponse(response)
 
     for resp in response:
+        st.json(response)
         st.text("Engine: " + resp["engine"] + " - description: " + resp["description"])
         st.dataframe(ut.json2DataFrame(resp["data"]))
     
