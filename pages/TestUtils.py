@@ -34,6 +34,29 @@ j = {
      }
 }
 
+j2 = {
+    "data" : [
+         
+     {
+          "entity":"MISC2",
+          "score":"0.5",
+          "index":1,
+          "word":"awesome cool wonderful!",
+          "start":0,
+          "end":23
+     },
+     {
+     "entity":"PER2",
+     "score":"0.5",
+     "index":2,
+     "word":"Ernesto Rossi",
+     "start":45,
+     "end":58
+     }
+    ]
+}
+ 
+
 st.text(text)
 mk = ut.makeMarkdown(text,j,[])
 
@@ -43,3 +66,4 @@ st.markdown(mk)
 
 st.json(j)
 
+st.json(j2)
