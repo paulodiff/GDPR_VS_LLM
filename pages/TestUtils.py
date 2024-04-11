@@ -67,3 +67,5 @@ st.markdown(mk)
 st.json(j)
 
 st.json(j2)
+st.dataframe(ut.json2DataFrame(j))
+st.dataframe(ut.json2DataFrameHF(j2["data"]))

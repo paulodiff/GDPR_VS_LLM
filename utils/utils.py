@@ -1,3 +1,4 @@
+import streamlit as st
 import json
 import os
 import pandas as pd
@@ -15,16 +16,77 @@ class CustomEncoder(json.JSONEncoder):
 
         return json.JSONEncoder.default(self, obj)
 
-# Config JSON utils
 
+
+def getAppConfig(configPath):
+    # D:\NLP_AI_NER\NER_APP\config\app_config\*.json
+    # json_folder_path = os.path.join("D:\\", "NLP_AI_NER", "NER_APP", "config", "app_config")
+    # json_file_path = os.path.join(json_folder_path, "app.json") 
+
+    json_file_path = st.secrets.app.appConfigFile
+
+
+    # print('getAppConfig read:' + json_file_path)
+    with open(json_file_path) as file:
+      data = json.load(file)
+      return data
+
+def saveAppConfig(data):
+    print('>>>saveAppConfig')
+    print(data)
+    # json_folder_path = os.path.join("D:\\", "NLP_AI_NER", "NER_APP", "config", "app_config")
+    # json_file_path = os.path.join(json_folder_path, "app.json") 
+
+    json_file_path = st.secrets.app.appConfigFile
+
+    with open(json_file_path, 'w') as f:
+      json.dump(data, f)
+   
+def updateAppConfigAddEngine(engineId):
+    print('>>>updateAppConfigAddEngine')
+    print(engineId)
+    # reload ...
+    jc = getAppConfig('')
+    jc["engine_config"].append({
+       "engine_id": engineId, 
+       "enable": False
+    })
+    saveAppConfig(jc)   
+
+def updateAppConfig(data):
+    # D:\NLP_AI_NER\NER_APP\config\app_config\*.json
+    print('>>>updateAppConfig')
+    print(data)
+    # reload ...
+    jc = getAppConfig('')
+    jc["engine_config"] = json.loads(data)
+    saveAppConfig(jc)
+
+def getEngineConfigFromId(engine_id):
+  jc = getJsonConfigFiles('')
+  for item in jc:
+    # print(item)
+    if (item['id'] == engine_id):
+      return item
+  return {"id" : "ENGINE_NOT_FOUND", "description" : "ENGINE_NOT_FOUND"}
+    
+      
+    
+
+
+def getEngineConfig(root):
+   return getJsonConfigFiles(root)
+
+
+# Config JSON utils
 def getJsonConfigFiles(rootPath):
-    # D:\NLP_AI_NER\NER_APP\config\cfg1.json
-    json_folder_path = os.path.join("D:\\", "NLP_AI_NER", "NER_APP", "config")
+    # D:\NLP_AI_NER\NER_APP\config\engine_config\*.json
+    json_folder_path = os.path.join("D:\\", "NLP_AI_NER", "NER_APP", "config", "engine_config")
     json_files = [x for x in os.listdir(json_folder_path) if x.endswith(".json")]
     json_data = []
     for json_file in json_files:
         json_file_path = os.path.join(json_folder_path, json_file)
-        print('Reading' + json_file_path)
+        # print('getJsonConfigFiles read:' + json_file_path)
         with open(json_file_path) as file:
             data = json.load(file)
             json_data.append(data)
@@ -35,7 +97,7 @@ def getJsonConfigFiles(rootPath):
 def buildEngineList(jsonConfig):
     engList = []
     for item in jsonConfig:
-      print(item['description'])
+      # print(item['description'])
       engList.append(item['description'])
     return engList
 
@@ -140,6 +202,7 @@ display(IPython.display.HTML(ann_text))
 
 '''
 
+# Spacy version
 def json2DataFrame(j):
   jc = json.dumps(j , cls=CustomEncoder)
   data = json.loads(jc)
@@ -147,5 +210,9 @@ def json2DataFrame(j):
   df = pd.DataFrame(data).T
   return df
 
+# Hugging Face version
+def json2DataFrameHF(j):
+  df = pd.json_normalize(j)
+  return df
 
 

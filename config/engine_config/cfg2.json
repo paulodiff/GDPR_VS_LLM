@@ -1,6 +1,8 @@
 {
+    "id" : "spacy_regexp",
     "engine" : "spacy",
     "description" : "Spacy_Regular_Expression",
+    "info" : "Spacy_Regular_Expression info ...",
     "version" : "1.1",
     "type" : "REGEXP",
     "requirements" : [
