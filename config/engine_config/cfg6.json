@@ -1,0 +1,37 @@
+{
+    "id" : "LMStudio_Mistral-7B-Instruct-v0.1-GGUF",
+    "engine" : "LMStudio",
+    "description" : "LMStudio - Mistral-7B-Instruct-v0.1-GGUF",
+    "info" : "LMStudio server",
+    "model_name" : "TheBloke/Mistral-7B-Instruct-v0.1-GGUF",
+    "version" : "1.0",
+    "ref" : "",
+    "apiUrl" : "http://localhost:1234/v1/chat/completions",
+    "method": "POST",
+    "api_key" : "lm-studio",
+    "payload" : { 
+        "model": "DeepMount00/Mistral-Ita-7b-GGUF",
+        "prompt" : "Elenca i dati personali del testo seguente: {txt}",
+        "messages": [
+            { "role": "system", "content": "Rispondi sempre correttamente." },
+            { "role": "user", "content": "Elenca i dati personali del testo seguente: {txt}" }
+        ],
+        "temperature": 0.7, 
+        "max_tokens": -1,
+        "stream": false
+    },
+    "install_module" : [
+        ""
+    ],
+    "using_module" : [
+        {
+            "api" : "",
+            "prompt" : ""
+        }
+    ],
+    "requirements" : [
+       
+    ],
+    "lists" : []
+
+}

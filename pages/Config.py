@@ -15,7 +15,10 @@ def add_engine_button():
 def save_button():
     print(">>>SAVE BUTTON!..")
     print(df_config_editor)
-    df2save = df_config_editor[['engine_id', 'enable']]
+    # seleziona tutte le righe che non devono essere eliminate
+    df_filtered =  df_config_editor.loc[df_config_editor['remove'] == False]
+    df2save = df_filtered[['engine_id', 'enable']]
+    print(df2save)
     json_string = df2save.to_json(orient='records')  
     print("json data to save:")
     print(json_string)
@@ -96,7 +99,7 @@ df_config_editor = st.data_editor(df1,
                             num_rows="fixed",
                             hide_index=False
                            )
-st.button('Save data', on_click=save_button)
+st.button('Aggiorna configurazione', on_click=save_button)
 
 # print(df_config_editor)
 # print(df1)

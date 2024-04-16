@@ -57,6 +57,9 @@ def updateAppConfig(data):
     # D:\NLP_AI_NER\NER_APP\config\app_config\*.json
     print('>>>updateAppConfig')
     print(data)
+    print('>>>updateAppConfig remove item?')
+
+
     # reload ...
     jc = getAppConfig('')
     jc["engine_config"] = json.loads(data)
@@ -215,4 +218,35 @@ def json2DataFrameHF(j):
   df = pd.json_normalize(j)
   return df
 
+# Json Patch from key int to string ...
+def jsonPatchHF(j):
 
+  dataList = []
+  data = {}
+  # data['key'] = 'value'
+  # json_data = json.dumps(data)
+
+  print(j)
+  i = 0
+
+  for item in j:
+    print(i, item)
+    data = {}
+    data[str(i)] = item
+    dataList.append(item)
+    i = i + 1
+  
+  return json.dumps(dataList)
+
+# patch per il valore dello score decimale
+def jsonPatchScoreField(j):
+  data = []
+  # data['key'] = 'value'
+  # json_data = json.dumps(data)
+
+  for item in j:
+    item["score"] = str(item["score"])
+    data.append(item)
+  
+  return json.dumps(data)
+ 

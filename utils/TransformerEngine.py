@@ -15,4 +15,8 @@ class TransformerEngine():
         model = AutoModelForTokenClassification.from_pretrained(model_name)
         nlp = pipeline("ner", model=model, tokenizer=tokenizer)
         ner_results = nlp(self.text_2_analyze)
+
+        print('>>>>TransformerEngine---------------------------------------START')
+        print(ner_results)
+        print('>>>>TransformerEngine---------------------------------------END')
         return ner_results

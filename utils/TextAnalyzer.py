@@ -3,6 +3,7 @@
 import utils.utils as ut
 import utils.SpacyEngine as SE
 import utils.TransformerEngine as TE
+import utils.LMStudioEngine as LM
 
 def TextAnalyzer(text, config, options):
 
@@ -29,8 +30,28 @@ def TextAnalyzer(text, config, options):
             })
             
         elif engine == 'huggingface':
-            eng = TE.TransformerEngine(json_config, text)     
+            eng = TE.TransformerEngine(json_config, text)    
+
             data =  eng.run()
+
+            print(ut.jsonPatchScoreField(data))
+
+            result.append({
+                "engine" : engine,
+                "description" : item,
+                "data" : ut.jsonPatchScoreField(data)
+            })
+
+            # ut.jsonPatchHF(data)
+            # patch json "data" : [0 : {}] -> "data" : ["0" : {}]
+
+        elif engine == 'LMStudio':
+            eng = LM.LMStudioEngine(json_config, text)    
+
+            data =  eng.run()
+
+            # print(ut.jsonPatchScoreField(data))
+
             result.append({
                 "engine" : engine,
                 "description" : item,
