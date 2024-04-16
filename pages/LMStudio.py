@@ -26,6 +26,7 @@ PARAMS = {
 st.write(PARAMS)
 
 if st.button('Analizza'):
+    
     print(txt)
     prompt = "Elenca i dati personali della seguente frase:" + txt
     print(prompt)
@@ -41,7 +42,10 @@ if st.button('Analizza'):
         "stream": False
     }
     st.write(DATA)
-    r = requests.post(url=URL, json=DATA)
+    
+    with st.spinner('Wait for it...'):
+        r = requests.post(url=URL, json=DATA)
+
     data = r.json()
     st.write(data)
     print(data)

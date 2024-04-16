@@ -177,6 +177,63 @@ def makeMarkdown(text, json, config):
 
     return markdown
 
+# format LMStudio response
+def formatLMStudioResponse(r):
+    markdown = ''
+    last_index = 0
+    print("formatLMStudioResponse")
+    print(r)
+
+    #"choices": [
+    #{
+    #  "index": 0,
+    #  "message": {
+    #    "role": "assistant",
+    #    "content": " Nome: Mario Rossi\nCognome: Rossi\nQualifica professionale: Dr. (Dottore)\nNome completo per codice fiscale: Mario Rossi\nCodice fiscale: NRRRSS70E23H294A\nEvento: Convegno\nOrganizzazione: MyCorp Inc.\nCodice identificativo MyCorpo: 00304260409\nLuogo: Roma, in via Salaria 100\nInformazioni di salute: ha il raffreddore e l'influenza\nIndirizzo email: marco.rossi@libero.it"
+    #  },
+    #  "finish_reason": "stop"
+    #}
+    #],
+    
+    json_data = []
+
+    for item in r["choices"]:
+      print(item["index"],item["message"])
+      msg = item["message"]["content"]
+      print(msg)
+      list_msg = msg.split("\n")
+      print(list_msg)
+      for el in list_msg:
+         elems = el.split(":",1)
+         
+         d = 'NOT_FOUND'
+         v = 'NOT_FOUND'
+
+         if elems.count(1) > 1:
+            d = elems[0].strip()
+            v = elems[1].strip()
+           
+
+         json_data.append({
+            "description" : d,
+            "value" : v
+         })
+      print(json_data)
+    
+
+    return json_data
+
+
+
+
+
+
+
+
+
+
+
+
 
 '''
 
@@ -213,7 +270,7 @@ def json2DataFrame(j):
   df = pd.DataFrame(data).T
   return df
 
-# Hugging Face version
+# Hugging Face version & LMStudio
 def json2DataFrameHF(j):
   df = pd.json_normalize(j)
   return df
@@ -250,3 +307,17 @@ def jsonPatchScoreField(j):
   
   return json.dumps(data)
  
+# patch per normalizzare il risultato si Spacy in Json
+def jsonSpacy(j):
+  data = []
+  # data['key'] = 'value'
+  # json_data = json.dumps(data)
+
+  for item in j:
+    print(item)
+    print(j[item])
+    # item["score"] = str(item["score"])
+    data.append(j[item])
+  
+  return data
+   

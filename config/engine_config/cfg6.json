@@ -2,7 +2,7 @@
     "id" : "LMStudio_Mistral-7B-Instruct-v0.1-GGUF",
     "engine" : "LMStudio",
     "description" : "LMStudio - Mistral-7B-Instruct-v0.1-GGUF",
-    "info" : "LMStudio server",
+    "info" : "LMStudio server / Mistral model",
     "model_name" : "TheBloke/Mistral-7B-Instruct-v0.1-GGUF",
     "version" : "1.0",
     "ref" : "",

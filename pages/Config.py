@@ -72,7 +72,9 @@ for item in app_config_json["engine_config"]:
     df_config.append(
         {
             "engine_id" : item["engine_id"],
+            "engine" : engine_config["engine"],
             "description": engine_config["description"],
+            "info": engine_config["info"],
             "enable" : item["enable"],
             "remove" : False,
         }
@@ -84,16 +86,18 @@ for item in app_config_json["engine_config"]:
 
 print(df_config)
 
-st.text("Engine configurati:")
+st.text("Engine di analisi configurati:")
 df1 = pd.DataFrame(df_config)
 df_config_editor = st.data_editor(df1, 
                            use_container_width=True,
                            key="df_config_editor",
                            column_config={
-                                "engine_id": "Engine ID",
-                                "description": "Engine desc",
-                                "enable" : "Engine enabled",
-                                "remove" : "Remove Engine",
+                                "engine_id": "id",
+                                "engine": "engine",
+                                "description": "description",
+                                "info": "info",
+                                "enable" : "enabled",
+                                "remove" : "remove",
                                  },
                             disabled=["engine_id", "description"],
                             num_rows="fixed",

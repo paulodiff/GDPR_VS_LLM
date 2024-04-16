@@ -2,7 +2,7 @@
     "id" : "spacy_regexp",
     "engine" : "spacy",
     "description" : "Spacy_Regular_Expression",
-    "info" : "Spacy_Regular_Expression info ...",
+    "info" : "Spacy with Regular Expression rules",
     "version" : "1.1",
     "type" : "REGEXP",
     "requirements" : [

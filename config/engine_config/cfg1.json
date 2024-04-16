@@ -2,7 +2,7 @@
     "id" : "spacy_list",
     "engine" : "spacy",
     "description" : "Spacy_List",
-    "info" : "Spacy_List info ...",
+    "info" : "Spacy with data lists",
     "version" : "1.1",
     "type" : "LIST",
     "requirements" : [

@@ -2,7 +2,7 @@
     "id" : "spacy_custom_it_nerIta_trf",
     "engine" : "spacy",
     "description" : "Spacy_it_nerIta_trf",
-    "info" : "Spacy_it_nerIta_trf info ...",
+    "info" : "Spacy with Spacy_it_nerIta_trf trained model from huggingface",
     "version" : "1.1",
     "type" : "CUSTOM",
     "ref" : "https://huggingface.co/bullmount/it_nerIta_trf",

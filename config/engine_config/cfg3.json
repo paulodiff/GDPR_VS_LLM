@@ -2,7 +2,7 @@
     "id" : "spacy_ner",
     "engine" : "spacy",
     "description" : "Spacy_NER",
-    "info" : "Spacy_Regular_Expression info ...",
+    "info" : "Spacy using model it_core_news_lg",
     "version" : "1.1",
     "type" : "NER",
     "ner_model" : "it_core_news_lg",

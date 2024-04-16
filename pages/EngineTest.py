@@ -3,7 +3,14 @@ import utils.utils as ut
 import utils.TextAnalyzer as te
 import time
 
-st.subheader('EngineTest: test di uno o più engine configurati')
+
+st.set_page_config(
+     page_title='EngineTest',
+     layout="wide",
+     initial_sidebar_state="expanded",
+)
+
+st.subheader('EngineTest: prova di uno o più engine configurati di analisi dati personali')
 
 json_config = ut.getJsonConfigFiles('dummy')
 eng_list = ut.buildEngineList(json_config)
@@ -32,8 +39,10 @@ if st.button('Analizza'):
 
     for resp in response:
         st.text("Engine: " + resp["engine"] + " - description: " + resp["description"])
+        
+        st.dataframe(resp["data"], use_container_width=True)
+
         st.json(resp)
-        st.dataframe(ut.json2DataFrame(resp["data"]), use_container_width=True)
         
     
     # st.json(response)

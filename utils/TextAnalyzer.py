@@ -1,5 +1,6 @@
 # Analyze text and return data
 
+import streamlit as st
 import utils.utils as ut
 import utils.SpacyEngine as SE
 import utils.TransformerEngine as TE
@@ -14,7 +15,7 @@ def TextAnalyzer(text, config, options):
     result = []
 
     for item in options:
-        print('Start Text Analyzer with description: ' + item)
+        print('## Start Text Analyzer with description: ' + item)
         json_config = ut.getConfigFromDescription(config, item)
         engine = json_config['engine']
 
@@ -22,24 +23,27 @@ def TextAnalyzer(text, config, options):
   
         if engine == 'spacy':
             eng = SE.SpacyEngine(json_config, text)
-            data =  eng.run()
+            with st.spinner('Spacy is working for you...'):
+                data =  eng.run()
+
             result.append({
                 "engine" : engine,
                 "description" : item,
-                "data" : data
+                "data" : ut.jsonSpacy(data)
             })
             
         elif engine == 'huggingface':
             eng = TE.TransformerEngine(json_config, text)    
 
-            data =  eng.run()
+            with st.spinner('Wait hugginface model working....'):
+                data =  eng.run()
 
             print(ut.jsonPatchScoreField(data))
 
             result.append({
                 "engine" : engine,
                 "description" : item,
-                "data" : ut.jsonPatchScoreField(data)
+                "data" : data
             })
 
             # ut.jsonPatchHF(data)
@@ -47,15 +51,18 @@ def TextAnalyzer(text, config, options):
 
         elif engine == 'LMStudio':
             eng = LM.LMStudioEngine(json_config, text)    
+            with st.spinner('Wait LMStudio model calling....'):
+                data =  eng.run()
+            
 
-            data =  eng.run()
+            report = ut.formatLMStudioResponse(data)
 
             # print(ut.jsonPatchScoreField(data))
 
             result.append({
                 "engine" : engine,
                 "description" : item,
-                "data" : data
+                "data" : report
             })
 
         else: 

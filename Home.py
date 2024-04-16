@@ -19,12 +19,19 @@ st.set_page_config(
 
 st.header("Home")
 
-st.subheader("NER Named Entity Recognition text analyzer")
+st.image('logo.png', caption='LOGO')
+
+# open and display README.md
+with open('README.md') as f: s = f.read()
+st.markdown(s)
 
 
-st.text("https://github.com/paulodiff/GDPR_VS_LLM/blob/main/README.md")
 
+     
 
+st.subheader("GDPR text analyze")
 
-st.subheader("Analisi del testo per riconoscere e sottolineare entità da oscurare per essere sottoposte ad un LLM")
+st.text("Github: https://github.com/paulodiff/GDPR_VS_LLM/blob/main/README.md")
+
+st.text("Analisi del testo per riconoscere e sottolineare dati personali prima di inviarli ad un LLM")
 
