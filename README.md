@@ -13,7 +13,7 @@ Sullo sfondo ci sono una chiavetta usb, un floppy disk, un cdrom, una nuvola col
 
 ![Copilot: Genera un'immagine così descritta: in primo piano si vede una persona seduta ad un computer. Sullo sfondo ci sono una chiavetta usb, un floppy disk, un cdrom, una nuvola collegati da una scia di un flusso dati che entra nel computer della persona.](STORIA_2.png)
 
-# Ma un piccolo ragazzo risolse tutto creando un software "GDPR_vs_LLM"
+# Ma un  ragazzo risolse tutto creando un software "GDPR_vs_LLM"
 
 
 ![Copilot:Genera un'immagine così descritta: un super eroe digitale, con una maglietta con un logo rosso con il testo "GDPR" taglia con un'ascia tutti i collegamenti fra una postazione pc ed una nuvola](STORIA_3.png)
