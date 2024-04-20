@@ -1,9 +1,27 @@
 
-
 # GDPR_VS_LLM
 
+## Lastoria 
 
-## Prima di usare un LLM controlliamo i dati che inviamo!
+# In un mondo ideale tutti potevano usare i dati di tutti con gli LLM
+
+![Copilot: Genera un'immagine così descritta: in primo piano si vede una persona seduta ad un computer. Sullo schermo del computer su sfondo bianco c'è un testo nero "LLM".
+Sullo sfondo ci sono una chiavetta usb, un floppy disk, un cdrom, una nuvola collegati da una scia di un flusso dati che entra nel computer della persona.](STORIA_1.png)
+
+
+# Un giorno arrivò GDPR e bloccò tutti le trasmissioni dei dati per garantire la sicurezza
+
+![Copilot: Genera un'immagine così descritta: in primo piano si vede una persona seduta ad un computer. Sullo sfondo ci sono una chiavetta usb, un floppy disk, un cdrom, una nuvola collegati da una scia di un flusso dati che entra nel computer della persona.](STORIA_2.png)
+
+# Ma un piccolo ragazzo risolse tutto creando un software "GDPR_vs_LLM"
+
+
+![Copilot:Genera un'immagine così descritta: un super eroe digitale, con una maglietta con un logo rosso con il testo "GDPR" taglia con un'ascia tutti i collegamenti fra una postazione pc ed una nuvola](STORIA_3.png)
+
+
+# La morale!
+
+Prima di usare un LLM controlliamo i dati che inviamo!
 https://github.com/paulodiff/GDPR_VS_LLM.git
 
 ## Un software eseguito in locale (sul proprio pc) che cerca di trovare ed evidenziare i dati personali che non dovremmo inviare ad un LLM (come ChatGPT, Gemini, Bart ...) durante le richieste ...
