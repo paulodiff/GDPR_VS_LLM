@@ -1,7 +1,7 @@
 
 # GDPR_VS_LLM
 
-## Lastoria 
+## La storia 
 
 # In un mondo ideale tutti potevano usare i dati di tutti con gli LLM
 
@@ -9,7 +9,7 @@
 Sullo sfondo ci sono una chiavetta usb, un floppy disk, un cdrom, una nuvola collegati da una scia di un flusso dati che entra nel computer della persona.](STORIA_1.png)
 
 
-# Un giorno arrivò GDPR e bloccò tutti le trasmissioni dei dati per garantire la sicurezza
+# Un giorno arrivò GDPR e bloccò tutto per garantirne la riservatezza
 
 ![Copilot: Genera un'immagine così descritta: in primo piano si vede una persona seduta ad un computer. Sullo sfondo ci sono una chiavetta usb, un floppy disk, un cdrom, una nuvola collegati da una scia di un flusso dati che entra nel computer della persona.](STORIA_2.png)
 
@@ -21,18 +21,24 @@ Sullo sfondo ci sono una chiavetta usb, un floppy disk, un cdrom, una nuvola col
 
 # La morale!
 
-Prima di usare un LLM controlliamo i dati che inviamo!
-https://github.com/paulodiff/GDPR_VS_LLM.git
+>  Prima di usare un LLM controlliamo i dati che inviamo!
 
-## Un software eseguito in locale (sul proprio pc) che cerca di trovare ed evidenziare i dati personali che non dovremmo inviare ad un LLM (come ChatGPT, Gemini, Bart ...) durante le richieste ...
 
-Il testo viene analizzato dai seguenti motori
+# Cos'è GDPR_VS_LLM
+
+## Un software eseguito in locale (sul proprio pc) che cerca di trovare ed evidenziare i dati personali che non dovremmo inviare ad un LLM (come ChatGPT, Gemini, Bart, Copilot, Mistral ecc ...) durante le richieste ...
+
+# Come funziona ?
+
+Il testo viene analizzato da diversi motori di analisi del testo specializza in [NER](https://en.wikipedia.org/wiki/Named-entity_recognition):
 
 - Spacy (List, RegularExpression, NER Model)
 - HuggingFace (Model 1 .. )
-- LLM via LMStudio (Mistral et altri)
+- LLM vari attraverso LMStudio (Mistral et altri)
 
-## Alcune idee
+Il risultato è un report che evidenza i dati personali nel testo con
+
+## Riferimenti e risorse
 
 Garante Privacy
 https://www.garanteprivacy.it/home/diritti/cosa-intendiamo-per-dati-personali
