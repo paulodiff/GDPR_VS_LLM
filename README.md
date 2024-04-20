@@ -33,31 +33,39 @@ Sullo sfondo ci sono una chiavetta usb, un floppy disk, un cdrom, una nuvola col
 Il testo viene analizzato da diversi motori di analisi del testo specializza in [NER](https://en.wikipedia.org/wiki/Named-entity_recognition):
 
 - Spacy (List, RegularExpression, NER Model)
-- HuggingFace (Model 1 .. )
-- LLM vari attraverso LMStudio (Mistral et altri)
+- HuggingFace (vari modelli NER)
+- LLM vari attraverso LMStudio (Mistral, LLAMa 2,3 ed altri)
 
-Il risultato è un report che evidenza i dati personali nel testo con
+Il risultato è un report che evidenza i dati personali nel testo.
 
-## Riferimenti e risorse
+## Installazione 
 
-Garante Privacy
-https://www.garanteprivacy.it/home/diritti/cosa-intendiamo-per-dati-personali
-https://gdprlab.it/dati-sensibili-e-gdpr-quali-sono-e-come-trattarli-a-norma-di-legge/
+- TODO
+
+## Guida 
+
+- TODO
+
+## Riferimenti, risorse ed informazioni
+
+[Garante Privacy, informazioni](https://www.garanteprivacy.it/home/diritti/cosa-intendiamo-per-dati-personali) garanteprivacy.it
+
+[I dati sensibili](https://gdprlab.it/dati-sensibili-e-gdpr-quali-sono-e-come-trattarli-a-norma-di-legge/) gdprlab.it
 
 
-GDPR definizione dati personali - Commissione Europeaa
-https://commission.europa.eu/law/law-topic/data-protection/reform/what-personal-data_it
+[GDPR definizione dati personali - Commissione Europeaa](https://commission.europa.eu/law/law-topic/data-protection/reform/what-personal-data_it)
 
-Microsoft Presidio https://microsoft.github.io/presidio/
-Piattaforma già predisposta per questa analisi, integra diverse tecnologie, ottimo candidato, già completo analizza immagini ed altro
+[Microsoft Presidio](https://microsoft.github.io/presidio/) It provides fast identification and anonymization modules for private entities in text and images such as credit card numbers, names, locations, social security numbers, bitcoin wallets, US phone numbers, financial data and more.
 
-Spacy https://spacy.io/
-Libreria per l'analisi del testo completa anche con modelli NLP
+[Spacy](https://spacy.io/) Industrial-Strength
+Natural Language
+Processing
 
-Hugging Face https://huggingface.co/
-Modelli NER di pubblico dominio per l'analisi del testo
+[Hugging Face](https://huggingface.co/) The platform where the machine learning community collaborates on models, datasets, and applications.
 
-LMStudio
+
+
+[LMStudio](https://lmstudio.ai/) Permette di eseguire LLM in locale.
 
 
 ## Idea generale
