@@ -69,7 +69,3 @@ Processing
 [Streamlit](https://streamlit.io/)A faster way to build and share data apps
 
 
-## Idea generale
-Prima bozza una software con UI [StreamLite](https://streamlit.io/) per l'analisi di un testo da copia incolla che come output segnala gli eventuali dati personali 
-Avere molteplici analisi con modelli diversi con pesi diversi per un
-
