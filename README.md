@@ -64,8 +64,9 @@ Processing
 [Hugging Face](https://huggingface.co/) The platform where the machine learning community collaborates on models, datasets, and applications.
 
 
-
 [LMStudio](https://lmstudio.ai/) Permette di eseguire LLM in locale.
+
+[Streamlit](https://streamlit.io/)A faster way to build and share data apps
 
 
 ## Idea generale
