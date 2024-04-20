@@ -26,11 +26,11 @@ Sullo sfondo ci sono una chiavetta usb, un floppy disk, un cdrom, una nuvola col
 
 # Cos'è GDPR_VS_LLM
 
-## Un software eseguito in locale (sul proprio pc) che cerca di trovare ed evidenziare i dati personali che non dovremmo inviare ad un LLM (come ChatGPT, Gemini, Bart, Copilot, Mistral ecc ...) durante le richieste ...
+## Un software eseguito 👍 in locale 👍 (sul proprio pc) che cerca di trovare ed evidenziare i dati personali che non dovremmo inviare ad un LLM (come ChatGPT, Gemini, Bart, Copilot, Mistral ecc ...) durante le richieste ...
 
 # Come funziona ?
 
-Il testo viene analizzato da diversi motori di analisi del testo specializza in [NER](https://en.wikipedia.org/wiki/Named-entity_recognition):
+Il testo viene analizzato 👍 in locale 👍 da diversi motori di analisi del testo specializza in [NER](https://en.wikipedia.org/wiki/Named-entity_recognition):
 
 - Spacy (List, RegularExpression, NER Model)
 - HuggingFace (vari modelli NER)
