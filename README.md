@@ -3,17 +3,17 @@
 
 ## La storia 
 
-# In un mondo ideale tutti potevano usare i dati di tutti con gli LLM ...
+# In un mondo ideale si potevano usare tutti i dati con gli LLM ...
 
 ![Copilot: Genera un'immagine così descritta: in primo piano si vede una persona seduta ad un computer. Sullo schermo del computer su sfondo bianco c'è un testo nero "LLM".
 Sullo sfondo ci sono una chiavetta usb, un floppy disk, un cdrom, una nuvola collegati da una scia di un flusso dati che entra nel computer della persona.](STORIA_1.png)
 
 
-# ... un giorno arrivò GDPR e bloccò tutto per garantirne la riservatezza ...
+# ... un giorno super GDPR bloccò tutto per garantire la riservatezza ...
 
 ![Copilot: Genera un'immagine così descritta: in primo piano si vede una persona seduta ad un computer. Sullo sfondo ci sono una chiavetta usb, un floppy disk, un cdrom, una nuvola collegati da una scia di un flusso dati che entra nel computer della persona.](STORIA_2.png)
 
-# ... un  ragazzo risolse tutto creando un software "GDPR_vs_LLM"
+# ... un  ragazzo creò un software "GDPR_vs_LLM" ....
 
 
 ![Copilot:Genera un'immagine così descritta: un super eroe digitale, con una maglietta con un logo rosso con il testo "GDPR" taglia con un'ascia tutti i collegamenti fra una postazione pc ed una nuvola](STORIA_3.png)
